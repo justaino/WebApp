@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="E_Commerce_Website.AdminMaster" %>
+
+<%@ Register TagName="Quotes" TagPrefix="uc" Src="~/User Controls/Quotes.ascx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>PineApple Inc</title>
+    <link rel="stylesheet" type="text/css" href="StyleAdmin.css" />
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div class="wrapper">
+
+                    <h1><a href="Default.aspx">PineApple</a><span class="color">.</span></h1>
+
+                    <nav>
+                        <ul>
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="AdminHomePage.aspx">Products</a></li>
+                            <li><a href="Create.aspx">Add New Product</a></li>
+                        </ul>
+
+
+                    </nav>
+                </div>
+            </header>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer>
+            <div class="wrapper">
+                <div id="footer-info">
+                    <p>Copyright 2020 PineApple Inc. All rights reserved.</p>
+                    <p>13/14 Aungier Street</p>
+                    <p>Dublin 2</p>
+                    <p>Ireland</p>
+                    <p><a href="TermsAndConditions.aspx">Terms of Service</a> I <a href="Privacy.aspx">Privacy</a></p>
+                </div>
+                <div id="footer-links">
+                    <ul>
+                        <li>
+                            <h5>PineApple Inc</h5>
+                        </li>
+                        <li><a href="AboutUs.aspx">About Us</a></li>
+                        <li><a href="https://www.dbscompsoc.ie/">Meet The Team</a></li>
+                        <li><a href="https://www.instagram.com/dbscomp_soc/?hl=en">Instagram</a></li>
+                    </ul>
+
+                    <uc:Quotes ID="Admin" runat="server" />
+
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>
